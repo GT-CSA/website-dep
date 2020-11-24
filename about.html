@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<title>GT CSA</title>
+<link rel="stylesheet" type="text/css" href="css/mainStyles.css">
+<link rel="stylesheet" type="text/css" href="css/about.css">
+<link rel="shortcut icon" type="image/x-icon" href="img/logo.ico" />
+</head>
+
+<body>
+
+    <img id = "navigationbar" src = "img/navigationbar.png">
+        <nav>
+            <table width="80%" border="1" cellspacing="0" cellpadding="5">
+        	  <tr>
+        			<td width="270"><a href="index.html">HOME</a></td>
+                    <td width="270"><a href="about.html"><b>ABOUT</b></a></td>
+        			<td width="270"><a href="event.html">EVENTS</a></td>
+              <td width="270"><div class="dropdown">
+                  <button onclick="dropdown()" class="gallerybtn">GALLERY</button>
+                  <div id="Dropdown" class="dropdown-content">
+                    <a href="gallery2015-2016.html">2015-2016</a>
+                    <a href="gallery2016-2017.html">2016-2017</a>
+                  </div>
+                </div></td>
+        			<td width="270"><a href="sponsors.html">SPONSORS</a></td>
+        		</tr>
+        	</table>
+        </nav>
+
+    <img id = "chinese" src="img/chinese.png">
+
+    <div id = "backdrop">
+        <h1> Who We Are </h1>
+        <hr>
+        <p  style="line-height: 1.85em; font-size:10pt; margin-left: 20px; margin-right: 20px; text-align:center;">We the Chinese Student Association are committed to creating an atmosphere where Chinese,
+            Chinese-Americans, and all those interested in Chinese culture can come together. From
+            organizing small get-togethers to large-scale events integrated with college and community life,
+            CSA allows students to meet others to whom they can relate in various community, cultural,
+            and social settings. As an awareness and promoting organization, CSA also addresses and
+            discusses issues concerning Chinese and Chinese-Americans as students and as a community.
+            <br><br>While Chinese Student Association is devoted to Chinese culture and community at Tech,
+			it welcomes and encourages people of all ages, races, and backgrounds to participate in,
+			contribute to, and become part of CSA. </p>
+
+
+        <h1><br><br> Executive Officers </h1>
+        <br><p style="text-align:center"><a href="board.html">Board Officers</a></p>
+        <hr>
+
+        <table style="width:80%;margin-left:30px;">
+  <tr>
+    <td><img width="150px" src = "img/board/chelsea.jpg"></td>
+    <td><p style="line-height: 1.85em"><b>President</b>
+        <br>Chelsey Gao
+        <br><a href = "mailto:cgao46@gatech.edu">Email</a></p></td>
+  </tr>
+  <tr>
+    <td><img width="150px" src = "img/board/alice_shen.jpg"></td>
+    <td><p style="line-height: 1.85em"><b>Vice President of Administration</b>
+        <br>Alice Shen
+        <br><a href = "mailto:alice.shen222@gatech.edu">Email</a></p></td>
+  </tr>
+  <tr>
+    <td><img width="150px" src = "img/board/becca_xiao.jpg"></td>
+    <td><p style="line-height: 1.85em"><b>Vice President of Chinese Conversation</b>
+        <br>Becca Xiao
+        <br><a href = "mailto:rxiao35@gatech.edu">Email</a></p></td>
+  </tr>
+  <tr>
+    <td><img width="150px" src = "img/board/michelle_zhang.jpg"></td>
+    <td><p style="line-height: 1.85em"><b>Secretary</b>
+        <br>Michelle Zhang
+        <br><a href = "mailto:mzhang367@gatech.edu">Email</a></p></td>
+  </tr>
+  <tr>
+    <td><img width="150px" src = "img/board/david_li.jpg"></td>
+    <td><p style="line-height: 1.85em"><b>Treasurer</b>
+        <br>David Li
+        <br><a href = "mailto:lidavid2468@gatech.edu">Email</a></p></td>
+  </tr>
+</table>
+<hr>
+<p style="line-height: 1.85em;">To contact us...<br>Email us at csa.gatech@gmail.com</p>
+<p style="line-height: 1.85em;"><a href="https://orgsync.com/136126/chapter">Orgsync</a><br><br></p>
+</body>
+
+<script>
+  /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function dropdown() {
+    document.getElementById("Dropdown").classList.toggle("show");
+}
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.gallerybtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+</script>
+
+</html>

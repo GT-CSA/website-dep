@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<title>GT CSA</title>
+<link rel="stylesheet" type="text/css" href="css/mainStyles.css">
+<link rel="stylesheet" type="text/css" href="css/convo.css">
+<link rel="shortcut icon" type="image/x-icon" href="img/logo.ico" />
+</head>
+
+<body>
+
+    <img id = "navigationbar" src = "img/navigationbar.png">
+        <nav>
+            <table width="80%" border="1" cellspacing="0" cellpadding="5">
+				<tr>
+                    <td width="270"><a href="index.html">HOME</a></td>
+                    <td width="270"><a href="about.html">ABOUT</a></td>
+                    <td width="270"><a href="event.html">EVENTS</a></td>
+                    <td width="270"><div class="dropdown">
+                        <button onclick="dropdown()" class="gallerybtn">GALLERY</button>
+                        <div id="Dropdown" class="dropdown-content">
+                          <a href="gallery2015-2016.html">2015-2016</a>
+                          <a href="gallery2016-2017.html">2016-2017</a>
+                        </div>
+                      </div></td>
+                    <td width="270"><a href="sponsors.html">SPONSORS</a></td>
+  				  <td width="270"><a href="convo.html"><b>SPEAKING SESSIONS</b></a></td>
+          		</tr>
+        	</table>
+        </nav>
+
+    <img id = "chinese" src="img/chinese.png">
+
+    <div id = "backdrop">
+        <h1> Chinese Speaking Sessions </h1>
+        <hr>
+		<p>We the Chinese Student Association are committed to creating an atmosphere where Chinese,
+            Interested in practicing or learning how to speak Chinese? Join us at our Chinese speaking sessions!
+		<br>We accept everybody no matter the amount of experience</p>
+		<hr style="margin-right: 150px; margin-left: 150px">
+		<p><b>Times</b>
+		<br>Our speaking sessions are every
+		<br>Tuesday and Thursday
+		<br>6-7pm at Swann 206
+		<br><br>If you can't make the Tuesday session, don't worry! We will have another session on
+		Thursday with the same content. We will be going over Chinese
+		dialogue worksheets together.</p>
+		<h1><br><br> Worksheets </h1>
+        <hr>
+		<p><a href="worksheets/sept27-29.pdf" target="_blank">September 27th - 29th Worksheet</a></p>
+		<p><a href="worksheets/oct11-13.pdf" target="_blank">October 11th - 13th Worksheet</a></p>
+		<p><a href="worksheets/oct18-20.pdf" target="_blank">October 18th - 20th Worksheet</a></p>
+		<p><a href="worksheets/October25-27.pdf" target="_blank">October 25th - 27th Worksheet</a></p>
+		<p><a href="worksheets/nov1-3.pdf" target="_blank">November 1st - 3rd Worksheet</a></p>
+		<p><a href="worksheets/nov15-17.pdf" target="_blank">November 15th - 17th Worksheet</a></p>
+		<p><a href="worksheets/jan17-19.pdf" target="_blank">January 17th - 19th Worksheet</a></p>
+		<p><a href="worksheets/jan17-19.pdf" target="_blank">January 24th - 26th Worksheet</a></p>
+        <p><a href="worksheets/feb7-9.pdf" target="_blank">February 7th - 9th Worksheet</a></p>
+        <p><a href="worksheets/feb14-16.pdf" target="_blank">February 14th - 16th Worksheet</a></p>
+        <p><a href="worksheets/mar28-30.pdf" target="_blank">March 28th - 30th Worksheet</a></p>
+        <p><a href="worksheets/apr4-6.pdf" target="_blank">April 4th - 6th Worksheet</a></p>
+        <p><a href="worksheets/apr11-13.pdf" target="_blank">April 11th - 13th Worksheet</a></p>
+		<br><br><br>
+</body>
+
+<script>
+  /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function dropdown() {
+    document.getElementById("Dropdown").classList.toggle("show");
+}
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.gallerybtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+</script>
+
+</html>

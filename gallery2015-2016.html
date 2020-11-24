@@ -1,0 +1,483 @@
+<!doctype html>
+<html>
+<head>
+<title>GT CSA</title>
+<script type="text/javascript" src="js/prototype.js"></script>
+<script type="text/javascript" src="js/scriptaculous.js?load=effects"></script>
+<script type="text/javascript" src="js/lightbox.js"></script>
+<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/mainStyles.css">
+<link rel="stylesheet" type="text/css" href="css/gallery.css">
+<link rel="shortcut icon" type="image/x-icon" href="img/logo.ico" />
+</head>
+
+<body>
+    <img id = "navigationbar" src = "img/navigationbar.png">
+        <nav>
+        	<table width="80%" border="1" cellspacing="0" cellpadding="5">
+        	  <tr>
+                  <td width="270"><a href="index.html">HOME</a></td>
+                  <td width="270"><a href="about.html">ABOUT</a></td>
+                  <td width="270"><a href="event.html">EVENTS</a></td>
+                  <td width="270"><div class="dropdown">
+                      <button id="title" onclick="dropdown()" class="gallerybtn" style="font: bold">GALLERY</button>
+                      <div id="Dropdown" class="dropdown-content">
+                        <a href="gallery2015-2016.html">2015-2016</a>
+                        <a href="gallery2016-2017.html">2016-2017</a>
+                      </div>
+                    </div></td>
+                  <td width="270"><a href="sponsors.html">SPONSORS</a></td>
+        		</tr>
+        	</table>
+        </nav>
+      <div id="dragonBoatPic" align="right" style="display: none;">
+      <table>
+        <tr>
+          <td></td>
+          <td><h3 align="center" style="margin: 10px 0px"> Dragon Boat Racing Images </h3></td>
+            <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <a id='dragPop' rel="lightbox[drag]" href="img/dragonBoatPic/pic0.jpg"><img id="picDrag"></a>
+          </td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+	<div id="bubbleTeaPic" align="right" style="display: none;">
+      <table>
+        <tr>
+          <td></td>
+          <td><h3 align="center" style="margin: 10px 0px"> Bubble Tea Selling Images </h3></td>
+            <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <a id='bubblePop' rel="lightbox[bubble]" href="img/BubbleTea/pic0.jpg"><img id="picBubble"></a>
+          </td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <div id="foodsPic" align="right" style="display: none;">
+      <table>
+        <tr>
+          <td></td>
+          <td><h3 align="center" style="margin: 10px 0px"> Food Outing Images </h3></td>
+            <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+          <a id='foodPop' rel="lightbox[food]" href="img/FoodOuting/pic0.jpg"><img id="picFood"></a>
+        </td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <div id="dumplingPic" align="right" style="display: none;">
+      <table>
+        <tr>
+          <td></td>
+          <td><h3 align="center" style="margin: 10px 0px"> Dumpling Making Events Images </h3></td>
+            <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <a id='dumpPop' rel="lightbox[dumpling]" href="img/Dumpling/pic0.jpg"><img id="picDumpling"></a>
+          </td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <div id="skatingPic" align="right" style="display: none;">
+      <table>
+        <tr>
+          <td></td>
+          <td><h3 align="center" style="margin: 10px 0px"> Ice Skating Images </h3></td>
+            <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+          <a id='IcePop' rel="lightbox[skate]" href="img/IceSkating/pic0.jpg"><img id="picSkating"></a>
+        </td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <div id="lanternPic" align="right" style="display: none;">
+      <table>
+        <tr>
+          <td></td>
+          <td><h3 align="center" style="margin: 10px 0px">Lantern Festival Images </h3></td>
+            <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><a id='lanternPop' rel="lightbox[lantern]" href="img/LanternFestival/pic0.jpg"><img id="picLantern"></a></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <div id="paintPic" align="right" style="display: none;">
+      <table>
+        <tr>
+          <td></td>
+          <td><h3 align="center" style="margin: 10px 0px">Paintball with HKSA Images </h3></td>
+            <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <a id='PaintPop' rel="lightbox[paint]" href="img/Paintball/pic0.jpg"><img id="picPaint"></a>
+          </td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+
+    <img id = "chinese" src="img/chinese.png">
+    <div id = "backdrop">
+        <h1> 2015-2016 Events</h1>
+		<hr>
+		<h5 align="center"><font color="white"> Click Image to View Album </font></h5>
+		<h5 align="center"><font color = "white"> Left and Right arrow to navigate album </font></h5>
+        <table id="table1" margin-left="50px" cellspacing="25" cellpadding="30">
+          <tr>
+                <td width="225" align="center">
+                  <h2>Dragon Boat Racing</h2>
+                      <span style="cursor:pointer"><img id = "dragonRacingFront" width="150px" height="150px" src="img/DragonBoat/pic0.jpg" onclick="dragonPic()"></span>
+                </td>
+                <td width="150" align="center">
+                  <h2>Bubble Tea</h2>
+                  <span style="cursor:pointer"><img id = "bubbleTeaSelling" width="150px" height="150px" src="img/BubbleTea/pic0.jpg" onclick="bubblePic()"></span>
+                </td>
+          </tr>
+          <tr>
+                <td width="225" align="center">
+                <h2>Food Outing</h2>
+                  <span style="cursor:pointer"><img id="foodOuting" width="150px" height="150px" src="img/FoodOuting/pic0.jpg" onclick="foodPic()"></span>
+                </td>
+                <td width="150" align="center">
+                  <h2> Dumpling Making </h2>
+                    <span style="cursor:pointer"><img id = "dumpling" width="150px" height="150px" src="img/Dumpling/pic0.jpg" onclick="dumplingPic()"></span>
+                </td>
+          </tr>
+          <tr>
+              <td width="225" align="center">
+                <h2>Ice Skating</h2>
+                <span style="cursor:pointer"><img id="skating" width="150px" height="150px" src="img/IceSkating/pic0.jpg" onclick="skatingPic()"></span>
+              </td>
+              <td width="150" align="center">
+                <h2>Lantern Festival</h2>
+                <span style="cursor:pointer"><img id="lantern" width="150px" height="150px" src="img/LanternFestival/pic0.jpg" onclick="lanternPic()"></span>
+              </td>
+          </tr>
+          <tr>
+            <td width="225" align="center">
+              <h2> Paintball with HKSA </h2>
+                <span style="cursor:pointer"><img id = "paint" width="150px" height="150px" src="img/Paintball/pic0.jpg" onclick="paintPic()"></span>
+            </td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+		        <h3> Check Facebook for more images </h3>
+  </div>
+
+</body>
+
+<script>
+  /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function dropdown() {
+    document.getElementById("Dropdown").classList.toggle("show");
+}
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.gallerybtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+var dragArray = new Array();
+var foodArray = new Array();
+var bubbleArray = new Array();
+var dumplingArray = new Array();
+var skatingArray = new Array();
+var lanternArray = new Array();
+var paintArray = new Array();
+var drag = false;
+var food = false;
+var bubble = false;
+var dump = false;
+var skate = false;
+var lantern = false;
+var paint = false;
+
+for (i = 0; i < 12; i++) {
+    foodArray[i] = new Image();
+    foodArray[i].src = "img/FoodOuting/pic" + i + ".jpg";
+    lanternArray[i] = new Image();
+    lanternArray[i].src = "img/LanternFestival/pic" + i + ".jpg";
+}
+for (a = 0; a < 18; a++) {
+    dragArray[a] = new Image();
+    dragArray[a].src = "img/DragonBoat/pic" + a + ".jpg";
+}
+for (b = 0; b < 3; b++) {
+    bubbleArray[b] = new Image();
+    bubbleArray[b].src = "img/BubbleTea/pic" + b + ".jpg";
+}
+for (c = 0; c < 15; c++) {
+    dumplingArray[c] = new Image();
+    dumplingArray[c].src = "img/Dumpling/pic" + c + ".jpg";
+}
+for (d = 0; d < 55; d++) {
+    skatingArray[d] = new Image();
+    skatingArray[d].src = "img/IceSkating/pic" + d + ".jpg";
+}
+for (e = 0; e < 50; e++) {
+    paintArray[e] = new Image();
+    paintArray[e].src = "img/Paintball/pic" + e + ".jpg";
+}
+
+var counter = 0;
+
+function determine() {
+  var stringArray = [];
+  if (drag == true) {
+    stringArray = ["dragArray", 'picDrag', 'DragonBoat','dragPop'];
+  } else if (food == true) {
+    stringArray = ["foodArray", 'picFood', 'FoodOuting', 'foodPop'];
+	} else if (bubble == true) {
+		stringArray = ["bubbleArray", 'picBubble', 'BubbleTea', 'bubblePop'];
+	} else if (dump == true) {
+		stringArray = ["dumplingArray", 'picDumpling', 'Dumpling', 'dumpPop'];
+	} else if (lantern == true) {
+		stringArray = ["lanternArray", 'picLantern', 'LanternFestival', 'lanternPop'];
+	} else if (paint == true) {
+		stringArray = ["paintArray", 'picPaint', 'Paintball', 'PaintPop'];
+	} else if (skate == true) {
+		stringArray = ["skatingArray", 'picSkating', 'IceSkating', 'IcePop'];
+	}
+	return stringArray
+}
+function getArrayByName(name) {
+	if (name == "dragArray") {
+		return dragArray;
+	} else if (name == "bubbleArray") {
+		return bubbleArray;
+	} else if (name == "lanternArray") {
+		return lanternArray;
+	} else if (name == "paintArray") {
+		return paintArray;
+	} else if (name == "skatingArray") {
+		return skatingArray;
+	} else if (name == "dumpingArray") {
+		return dumplingArray;
+	} else if (name == "foodArray") {
+		return foodArray;
+	}
+	return null;
+}
+function checkOrientation(id) {
+    var pic = document.getElementById(id);
+    var h = pic.height;
+    var w = pic.width;
+    if (h < 250 || w < 350) {
+        h *= 2;
+        w *= 2;
+        document.getElementById(id).height = h;
+        document.getElementById(id).style.width = w;
+    }
+}
+
+function dragonPic() {
+    document.getElementById("bubbleTeaPic").style.display = "none";
+    document.getElementById("foodsPic").style.display = "none";
+    document.getElementById("dumplingPic").style.display = "none";
+    document.getElementById("skatingPic").style.display="none";
+    document.getElementById("lanternPic").style.display="none";
+    document.getElementById("paintPic").style.display="none";
+    document.getElementById("dragonBoatPic").style.display = "block";
+    drag = true;
+    food = false;
+    bubble = false;
+    dump = false;
+    skate = false;
+    lantern = false;
+    paint = false;
+    setImage(dragArray, 'picDrag');
+    setImageReference(dragArray, "dragPop");
+    checkOrientation("picDrag");
+}
+function bubblePic() {
+    document.getElementById("foodsPic").style.display = "none";
+    document.getElementById("dragonBoatPic").style.display = "none";
+    document.getElementById("dumplingPic").style.display = "none";
+    document.getElementById("skatingPic").style.display="none";
+    document.getElementById("lanternPic").style.display="none";
+    document.getElementById("paintPic").style.display="none";
+    document.getElementById("bubbleTeaPic").style.display = "block";
+    drag = false;
+    food = false;
+    bubble = true;
+    dump = false;
+    skate = false;
+    lantern = false;
+    paint = false;
+    setImage(bubbleArray, 'picBubble');
+    setImageReference(bubbleArray, "bubblePop");
+    checkOrientation("picBubble");
+}
+function foodPic() {
+    document.getElementById("bubbleTeaPic").style.display = "none";
+    document.getElementById("dragonBoatPic").style.display = "none";
+    document.getElementById("dumplingPic").style.display = "none";
+    document.getElementById("skatingPic").style.display="none";
+    document.getElementById("lanternPic").style.display="none";
+    document.getElementById("paintPic").style.display="none";
+    document.getElementById("foodsPic").style.display = "block";
+    drag = false;
+    food = true;
+    bubble = false;
+    dump = false;
+    skate = false;
+    lantern = false;
+    paint = false;
+    setImage(foodArray, 'picFood');
+    setImageReference(foodArray, "foodPop");
+    checkOrientation("picFood");
+}
+function dumplingPic() {
+    document.getElementById("bubbleTeaPic").style.display = "none";
+    document.getElementById("dragonBoatPic").style.display = "none";
+    document.getElementById("foodsPic").style.display = "none";
+    document.getElementById("skatingPic").style.display="none";
+    document.getElementById("lanternPic").style.display="none";
+    document.getElementById("paintPic").style.display="none";
+    document.getElementById("dumplingPic").style.display = "block";
+    drag = false;
+    food = false;
+    bubble = false;
+    dump = true;
+    skate = false;
+    lantern = false;
+    paint = false;
+    setImage(dumplingArray, 'picDumpling');
+    setImageReference(dumpingArray, "dumpPop");
+    checkOrientation("picDumpling");
+}
+function skatingPic() {
+    document.getElementById("bubbleTeaPic").style.display = "none";
+    document.getElementById("dragonBoatPic").style.display = "none";
+    document.getElementById("foodsPic").style.display = "none";
+    document.getElementById("dumplingPic").style.display = "none";
+    document.getElementById("lanternPic").style.display="none";
+    document.getElementById("paintPic").style.display="none";
+    document.getElementById("skatingPic").style.display="block";
+    drag = false;
+    food = false;
+    bubble = false;
+    dump = false;
+    skate = true;
+    lantern = false;
+    paint = false;
+    setImage(skatingArray, 'picSkating');
+    setImageReference(skatingArray, "skatePop");
+    checkOrientation("picSkating");
+}
+function lanternPic() {
+    document.getElementById("bubbleTeaPic").style.display = "none";
+    document.getElementById("dragonBoatPic").style.display = "none";
+    document.getElementById("foodsPic").style.display = "none";
+    document.getElementById("dumplingPic").style.display = "none";
+    document.getElementById("skatingPic").style.display="none";
+    document.getElementById("paintPic").style.display="none";
+    document.getElementById("lanternPic").style.display="block";
+    drag = false;
+    food = false;
+    bubble = false;
+    dump = false;
+    skate = false;
+    lantern = true;
+    paint = false;
+    setImage(lanternArray, 'picLantern');
+    setImageReference(lanternArray, "lanternPop");
+    checkOrientation("picLantern");
+}
+function paintPic() {
+    document.getElementById("bubbleTeaPic").style.display = "none";
+    document.getElementById("dragonBoatPic").style.display = "none";
+    document.getElementById("foodsPic").style.display = "none";
+    document.getElementById("dumplingPic").style.display = "none";
+    document.getElementById("skatingPic").style.display="none";
+    document.getElementById("lanternPic").style.display="none";
+    document.getElementById("paintPic").style.display="block";
+    drag = false;
+    food = false;
+    bubble = false;
+    dump = false;
+    skate = false;
+    lantern = false;
+    paint = true;
+    setImage(paintArray, 'picPaint');
+    setImageReference(paintArray, "PaintPop");
+    checkOrientation("picPaint");
+}
+
+function next(arr, id, topic, popID) {
+    counter = ++counter % arr.length;
+    setImageReference(arr, popID);
+    document.getElementById(id).src = arr[counter].src;
+    checkOrientation(id);
+}
+
+function previous(arr, id, topic, popID) {
+    globalID = id;
+    if (counter == 0) {
+        counter = arr.length;
+    }
+    counter = --counter;
+    setImageReference(arr, popID)
+    document.getElementById(id).src = arr[counter].src;
+    checkOrientation(id);
+}
+
+function setImage(arr,id) {
+   	document.getElementById(id).src = arr[counter].src;
+}
+
+function setImageReference(arr, id) {
+  console.log(arr);
+  console.log(id);
+  document.getElementById(id).href = arr[counter].src;
+}
+
+document.addEventListener('keydown', function(event) {
+    var info = determine();
+	var slot1 = info[0];
+	var slot2 = info[1];
+	var slot3 = info[2];
+  var slot4 = info[3];
+	var array = getArrayByName(slot1);
+	if (event.keyCode == 37) {
+		previous(array, slot2, slot3, slot4);
+    } else if (event.keyCode == 39) {
+		next(array, slot2, slot3, slot4);
+    }
+})
+</script>
+</html>

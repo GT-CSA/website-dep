@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+<title>GT CSA</title>
+<link rel="stylesheet" type="text/css" href="css/mainStyles.css">
+<link rel="stylesheet" type="text/css" href="css/board.css">
+<link rel="shortcut icon" type="image/x-icon" href="img/logo.ico" />
+</head>
+
+<body>
+
+    <img id = "navigationbar" src = "img/navigationbar.png">
+        <nav>
+            <table width="80%" border="1" cellspacing="0" cellpadding="5">
+        	  <tr>
+        			<td width="270"><a href="index.html">HOME</a></td>
+                    <td width="270"><a href="about.html"><b>ABOUT</b></a></td>
+        			<td width="270"><a href="event.html">EVENTS</a></td>
+              <td width="270"><div class="dropdown">
+                  <button onclick="dropdown()" class="gallerybtn">GALLERY</button>
+                  <div id="Dropdown" class="dropdown-content">
+                    <a href="gallery2015-2016.html">2015-2016</a>
+                    <a href="gallery2016-2017.html">2016-2017</a>
+                  </div>
+                </div></td>
+        			<td width="270"><a href="sponsors.html">SPONSORS</a></td>
+        		</tr>
+        	</table>
+        </nav>
+
+    <img id = "chinese" src="img/chinese.png">
+
+    <div id = "backdrop">
+        <h1> Board Officers (Not Updated) </h1>
+        <hr>
+        <table cellpadding="10" style="width:90%;margin-left:30px;margin-right:30px">
+  <tr>
+    <td><p style="line-height:1.9em"><img width="150px" src = "img/board/michelle_zhang.jpg">
+      <br><h4>Michelle Zhang</h4>
+      <br><h5>Social Media</h5></p>
+      <br>
+    </td>
+    <td><p style="line-height:1.9em"><img width="150px" src = "img/board/evan_shi.jpg">
+      <br><h4>Evan Shi</h4>
+      <br><h5>Historian</h5></p>
+      <br>
+    </td>
+    <td><p style="line-height:1.9em"><img width="150px" src = "img/board/patricia_chang.jpg">
+      <br><h4>Patricia Chang</h4>
+      <br><h5>Org Sync</h5></p>
+      <br>
+    </td>
+    <td><p style="line-height:1.9em"><img width="150px" src = "img/board/david_li.jpg">
+      <br><h4>David Li</h4>
+      <br><h5>Fundraising</h5></p>
+      <br>
+    </td>
+  </tr>
+  <tr>
+    <td><p style="line-height:1.9em"><img width="150px" src = "img/board/derek_lee.jpg">
+      <br><h4>Derek Lee</h4>
+      <br><h5>Fundraising</h5></p>
+      <br>
+    </td>
+    <td><p style="line-height:1.9em"><img width="150px" src = "img/board/georgianna_lin.jpg">
+      <br><h4>Georgianna Lin</h4>
+      <br><h5>Fundraising</h5></p>
+      <br>
+    </td>
+    <td><p style="line-height:1.9em"><img width="150px" src = "img/board/eric_dong.jpg">
+      <br><h4>Eric Dong</h4>
+      <br><h5>Graphics</h5></p>
+      <br>
+    </td>
+    <td><p style="line-height:1.9em"><img width="150px" src = "img/board/isabel_araneta.jpg">
+      <br><h4>Isabel Araneta</h4>
+      <br><h5>Graphics</h5></p>
+      <br>
+    </td>
+  </tr>
+  <tr>
+    <td><p style="line-height:1.9em"><img width="150px" src = "img/board/jackie_wu.jpg">
+      <br><h4>Jackie Wu</h4>
+      <br><h5>Chinese Conversation</h5></p>
+      <br>
+    </td>
+    <td><p style="line-height:1.9em"><img width="150px" src = "img/board/angia_chen.jpg">
+      <br><h4>Angia Chen</h4>
+      <br><h5>Chinese Conversation</h5></p>
+      <br>
+    </td>
+    <td><p style="line-height:1.9em"><img width="150px" src = "img/board/becca_xiao.jpg">
+      <br><h4>Becca Xiao</h4>
+      <br><h5>Chinese Conversation</h5></p>
+      <br>
+    </td>
+    <td><p style="line-height:1.9em"><img width="150px" src = "img/board/nancy_wang.jpg">
+      <br><h4>Nancy Wang</h4>
+      <br><h5>Chinese Conversation</h5></p>
+      <br>
+    </td>
+  </tr>
+  <tr>
+      <td><p style="line-height:1.9em"><img width="150px" src = "img/board/alyssa_tan.jpg">
+        <br><h4>Alyssa Tan</h4>
+        <br><h5>Web Developer</h5></p>
+        <br>
+      </td>
+  </tr>
+</table>
+<hr>
+<p style="line-height: 1.85em;">To contact us...<br>Email us at csa.gatech@gmail.com</p>
+<p style="line-height: 1.85em;"><a href="https://orgsync.com/136126/chapter">Orgsync</a><br><br></p>
+</body>
+
+<script>
+  /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function dropdown() {
+    document.getElementById("Dropdown").classList.toggle("show");
+}
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.gallerybtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+</script>
+
+</html>

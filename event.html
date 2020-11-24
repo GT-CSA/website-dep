@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<title>GT CSA</title>
+<link rel="stylesheet" type="text/css" href="css/mainStyles.css">
+<link rel="stylesheet" type="text/css" href="css/event.css">
+<link rel="shortcut icon" type="image/x-icon" href="img/logo.ico" />
+</head>
+
+<body>
+    <img id = "navigationbar" src = "img/navigationbar.png">
+        <nav>
+        	<table width="80%" border="1" cellspacing="0" cellpadding="5">
+				<tr>
+                    <td width="270"><a href="index.html">HOME</a></td>
+                    <td width="270"><a href="about.html">ABOUT</a></td>
+                    <td width="270"><a href="event.html"><b>EVENTS</b></a></td>
+                    <td width="270"><div class="dropdown">
+                        <button onclick="dropdown()" class="gallerybtn">GALLERY</button>
+                        <div id="Dropdown" class="dropdown-content">
+                          <a href="gallery2015-2016.html">2015-2016</a>
+                          <a href="gallery2016-2017.html">2016-2017</a>
+                        </div>
+                      </div></td>
+                    <td width="270"><a href="sponsors.html">SPONSORS</a></td>
+  				  <td width="270"><a href="convo.html">SPEAKING SESSIONS</a></td>
+          		</tr>
+        	</table>
+
+        </nav>
+
+        <iframe src="https://calendar.google.com/calendar/embed?src=csa.gatech%40gmail.com&ctz=America/New_York" style="border: 0" width="550" height="400" scrolling="no"></iframe>
+
+        <img id = "chinese" src="img/chinese.png">
+
+        <div id = "backdrop">
+            <h1> Major Events </h1>
+            <hr>
+            <p style="line-height: 1.85em;"><b>Dragon Boat Racing</b>
+            <p style="line-height: 1.85em;">The Atlanta Hong Kong Dragon Boat Festival is an annually hosted event for a friendly boat racing competition. We have been competing for the past years, and it was a great cultural and physical experience! </p>
+            <img id = "dragboat" src = "img/eventpics/dragonboat.png">
+            <hr style="margin-right: 150px; margin-left: 150px">
+            <p style="line-height: 1.85em;"><b>Tour of Asia</b>
+            <p style="line-height: 1.85em;">The Tour of Asia is an annual event held by Asian American Student Association. Various asian organizations provide cultural activites and delicious food. Free for all students.</p>
+
+            <img id = "tourofasia" src = "img/eventpics/tourofasia.png">
+            <hr style="margin-right: 150px; margin-left: 150px">
+            <p style="line-height: 1.85em;"><b>Moon Festival</b>
+            <p style="line-height: 1.85em;">Vietnamese Student Association holds the annual Moon Festival. The festival features a variety of live entertainment and Vietnamese cuisine. Many asian organizations will be present as well.</p>
+            <img id = "moonfest" src = "img/eventpics/moonfestival.png">
+            <hr style="margin-right: 150px; margin-left: 150px">
+            <p style="line-height: 1.85em;"><b>Lantern Festival</b>
+            <p style="line-height: 1.85em;">Our annually held event to celebrate the Lantern Festival, which traditionally ends the Chinese New Year period. We invite guest to perform, win raffle prizes, and of course, enjoy the free food.</p>
+            <img id = "lanternfest" src = "img/eventpics/lantern.png">
+            <hr style="margin-right: 150px; margin-left: 150px">
+            <p style="line-height: 1.85em;"><b>Fundraisings</b>
+            <p style="line-height: 1.85em;">To fund our events we typically do a few fundraising events such as sell bubble tea and spam mushubi. We are still open to any other fundraising ideas in the future, so if you have any suggestions, feel free to let us know!</p>
+            <img id = "fundraisings" src = "img/eventpics/fundraising.png">
+            <hr style="margin-right: 150px; margin-left: 150px">
+            <p style="line-height: 1.85em;"><b>General Meetings</b>
+            <p style="line-height: 1.85em;">Throughout the year, we hold a number of general meetings. These meetings are usually accompanied with a food event such as a food outing or making our own food, such as dumplings. We also go out for fun activities such as paintballing, going through mazes, and iceskating. It is a time for all the members to gather and socialize! </p>
+            <img id = "generalmeeting" src = "img/eventpics/dumpling.png">
+
+        </div>
+</body>
+
+<script>
+  /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function dropdown() {
+    document.getElementById("Dropdown").classList.toggle("show");
+}
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.gallerybtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+function display20152016() {
+    document.getElementById("display1").style.display = "block";
+}
+</script>
+
+
+</html>

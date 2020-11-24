@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+
+<title>GT CSA</title>
+
+<link rel="stylesheet" type="text/css" href="css/mainStyles.css">
+<link rel="shortcut icon" type="image/x-icon" href="img/logo.ico" />
+</head>
+
+<body>
+	<img id = "navigationbar" src = "img/navigationbar.png">
+        <nav>
+        	<table margin-left="50px" width="80%" border="1" cellspacing="0" cellpadding="5">
+        	  <tr>
+                  <td width="270"><a href="index.html"><b>HOME</b></a></td>
+                  <td width="270"><a href="about.html">ABOUT</a></td>
+                  <td width="270"><a href="event.html">EVENTS</a></td>
+                  <td width="270"><div class="dropdown">
+                      <button onclick="dropdown()" class="gallerybtn">GALLERY</button>
+                      <div id="Dropdown" class="dropdown-content">
+                        <a href="gallery2015-2016.html">2015-2016</a>
+                        <a href="gallery2016-2017.html">2016-2017</a>
+                      </div>
+                    </div></td>
+                  <td width="270"><a href="sponsors.html">SPONSORS</a></td>
+				  <td width="270"><a href="convo.html">SPEAKING SESSIONS</a></td>
+        		</tr>
+        	</table>
+        </nav>
+	   <div id="backdrop">
+		<h1>Upcoming Events</h1>
+		<hr>
+
+		<p style="line-height: 1.85em;"><b>Red Bean Bun Sale</b>
+        <p style="line-height: 1.85em;">March 30th, 11am-3pm<br>
+		Hey everyone, hope you all had a wonderful Spring Break!
+        This week we are having our Red Bun Fundraiser on
+        Tuesday and Thursday from 11AM- 3PM. Please come by on Skiles Walkway
+        to see us! Also, don't forget to spread the word!</p>
+		<hr style="margin-right: 150px; margin-left: 150px">
+
+		<p style="line-height: 1.85em;"><b>Chinese Speaking Session</b>
+        <p style="line-height: 1.85em;">Every Tuesday and Thursday 6-7pm at Swann 206<br>(Subject to change)<br>Want to learn to speak or teach Chinese?
+		<br>Join us at our Chinese Speaking Conversations
+		<br>All skill levels are welcome
+		<br>Check out the Speaking Session tab for more information</p>
+
+        <hr style="margin-right: 150px; margin-left: 150px">
+        <p style="line-height: 1.85em;">To contact us...<br>Email us at csa.gatech@gmail.com<br><br>Also like us on <a href="https://www.facebook.com/gatechcsa/" target="_blank">Facebook</a>!<br><br></p>
+		<p style="line-height: 1.85em;"><a href="https://orgsync.com/136126/chapter" target="_blank">Orgsync</a><br><br></p>
+
+		<iframe id = "fb" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fgatechcsa%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+	</div>
+</body>
+
+<script>
+  /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function dropdown() {
+    document.getElementById("Dropdown").classList.toggle("show");
+}
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.gallerybtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+</html>

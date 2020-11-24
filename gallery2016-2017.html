@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head>
+<title>GT CSA</title>
+<link rel="stylesheet" type="text/css" href="css/mainStyles.css">
+<link rel="stylesheet" type="text/css" href="css/gallery.css">
+<link rel="shortcut icon" type="image/x-icon" href="img/logo.ico" />
+</head>
+
+<body>
+    <img id = "navigationbar" src = "img/navigationbar.png">
+        <nav>
+        	<table width="80%" border="1" cellspacing="0" cellpadding="5">
+				<tr>
+                    <td width="270"><a href="index.html">HOME</a></td>
+                    <td width="270"><a href="about.html">ABOUT</a></td>
+                    <td width="270"><a href="event.html">EVENTS</a></td>
+                    <td width="270"><div class="dropdown">
+                        <button onclick="dropdown()" class="gallerybtn"><b>GALLERY</b></button>
+                        <div id="Dropdown" class="dropdown-content">
+                          <a href="gallery2015-2016.html">2015-2016</a>
+                          <a href="gallery2016-2017.html">2016-2017</a>
+                        </div>
+                      </div></td>
+                    <td width="270"><a href="sponsors.html">SPONSORS</a></td>
+  				  <td width="270"><a href="convo.html">SPEAKING SESSIONS</a></td>
+          		</tr>
+        	</table>
+        </nav>
+    <div id="dragonBoatPic" align="right" style="display: none">
+      <table>
+        <tr>
+          <td></td>
+          <td><h3 align="center" style="margin: 10px 0px"> Dragon Boat Racing Images </h3></td>
+            <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><img id="picDrag" src="img/DragonBoat2016-2017/DragonBoat/1.jpg"></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+
+    <img id = "chinese" src="img/chinese.png">
+    <div id = "backdrop">
+        <h1> 2016-2017 Events</h1>
+		<hr>
+		<h5 align="center"><font color="white"> Click Image to View Album </font></h5>
+		<h5 align="center"><font color = "white"> Left and Right arrow to navigate album </font></h5>
+        <table id="table1" margin-left="50px" cellspacing="25" cellpadding="30">
+          <tr>
+                <td width="225" align="center">
+                  <h2>Dragon Boat Racing</h2>
+                      <span style="cursor:pointer"><img id = "dragonRacingFront" width="150px" height="150px" src="img/DragonBoat2016-2017/DragonBoat/1.jpg" onclick="dragonPic()"></span>
+                </td>
+                <td width="150" align="center">
+                </td>
+          </tr>
+        </table>
+		        <h3> Check Facebook for more images </h3>
+  </div>
+
+</body>
+
+<script>
+  /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function dropdown() {
+    document.getElementById("Dropdown").classList.toggle("show");
+}
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.gallerybtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+var dragArray = new Array();
+
+var drag = false;
+
+
+for (a = 1; a < 115; a++) {
+    dragArray[a] = new Image();
+    dragArray[a].src = "img/DragonBoat2016-2017/DragonBoat/" + a + ".jpg";
+}
+
+var counter = 1;
+
+function determine() {
+	var stringArray = [];
+	if (drag == true) {
+		stringArray = ["dragArray", 'picDrag', 'DragonBoat'];
+	}
+	return stringArray;
+}
+function getArrayByName(name) {
+	if (name == "dragArray") {
+		return dragArray;
+	}
+	return null;
+}
+function checkOrientation(id) {
+    var pic = document.getElementById(id);
+    var h = pic.height;
+    var w = pic.width;
+    if (h < 250 || w < 350) {
+        h *= 2;
+        w *= 2;
+        document.getElementById(id).height = h;
+        document.getElementById(id).style.width = w;
+    }
+}
+
+function dragonPic() {
+    document.getElementById("dragonBoatPic").style.display = "block";
+    checkOrientation("picDrag");
+	drag = true;
+}
+
+function next(arr, id, topic) {
+    counter = ++counter % arr.length;
+	document.getElementById(id).src = arr[counter].src;
+	console.log(arr[counter].src);
+    //document.getElementById(id).src = "img/" + topic + "/pic" + counter + ".jpg";
+    checkOrientation(id);
+}
+
+function previous(arr, id, topic) {
+    counter = --counter;
+    if (counter == 0) {
+        counter = arr.length - 1 ;
+    }
+	document.getElementById(id).src = arr[counter].src;
+    //document.getElementById(id).src = "img/" + topic + "/pic" + counter + ".jpg";
+    checkOrientation(id);
+}
+
+document.addEventListener('keydown', function(event) {
+    var info = determine();
+	var slot1 = info[0];
+	var slot2 = info[1];
+	var slot3 = info[2];
+	var array = getArrayByName(slot1);
+	if (event.keyCode == 37) {
+		previous(array, slot2, slot3);
+    } else if (event.keyCode == 39) {
+		next(array, slot2, slot3);
+    }
+})
+</script>
+</html>
